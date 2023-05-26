@@ -9,5 +9,14 @@ const empty = [[ 0,0,0, 0,0,0, 0,0,0 ],
                [ 0,0,0, 0,0,0, 0,0,0 ]];
 
 export function generate() {
-  return empty;
+  const board = [];
+
+  for (let i = 0; i < 9; i++) {
+    board[i] = [];
+    for (let j = 0; j < 9; j++) {
+      board[i][j] = 0;
+    }
+  }
+
+  return board;
 }
