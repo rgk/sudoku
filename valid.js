@@ -1,7 +1,7 @@
 export function isValid(board) {
   const size = { x: board.length, y: board[0].length };
   const total = 45;
-  
+
   for (let row = 0, totalX = 0, totalY = 0; row < size.x; row++) {
     for (let col = 0; col < size.y; col++) {
       totalX += board[row][col];
@@ -13,7 +13,7 @@ export function isValid(board) {
   return true;
 }
 
-function findEmpty(board) {
+export function findEmpty(board) {
   const size = { x: board.length, y: board[0].length };
   for (let row = 0; row < size.x; row++) {
     for (let col = 0; col < size.y; col++) {
