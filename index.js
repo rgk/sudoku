@@ -13,3 +13,7 @@ export function update(value, row, column) {
   state[row][column] = temp;
   return false;
 }
+
+export function restart(board = generate()) {
+  return state = board;
+}
