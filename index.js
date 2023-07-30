@@ -1,4 +1,4 @@
-import { isValid } from './valid.js';
+import { isValid, findEmpty } from './valid.js';
 import { generate } from './generate.js';
 
 let state = generate();
@@ -8,7 +8,10 @@ export function update(value, row, column) {
   const temp = state[row][column];
   state[row][column] = value;
 
-  if (isValid(state)) return true;
+  if (isValid(state)) {
+    if (findEmpty(state) === null) console.log('done');
+    return true;
+  }
 
   state[row][column] = temp;
   return false;
