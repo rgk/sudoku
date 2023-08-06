@@ -7,10 +7,13 @@ import { update } from './index.js';
 
 <template>
     <div id="board" @click="update">
-        <div class="section">
-            <div class="cell">
-
+        <div v-for="i in 9" class="section">
+            <div v-for="j in 9" class="cell">
+                <input>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+</style>
