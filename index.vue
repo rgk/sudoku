@@ -13,7 +13,7 @@ onMounted(() => {
   <div id="board">
     <div v-for="i in 9" class="section">
       <div v-for="j in 9" class="cell">
-        <input @click="update">
+        <input @click="update" >
       </div>
     </div>
   </div>
@@ -21,9 +21,14 @@ onMounted(() => {
 
 <style scoped>
   #board {
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 2px;
+  }
+
+  .section, .cell {
+    border: 1px solid black;
   }
 </style>
